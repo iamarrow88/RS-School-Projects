@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Eco Sounds</title>
+   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+   <link rel="stylesheet" href="css/normalize.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+   <header class="header">
+      <div class="container header__container">
+         <div class="logo" data-sound="forest">
+            <a href="#" class="logo__link">
+               <svg class="logo-icon">
+                  <use xlink:href="./assets/svg/!sprite.svg#logo"></use>
+               </svg>
+            </a>
+         </div>
+   
+         <nav class="nav">
+            <ul class="nav__menu">
+               <!-- <li class="menu__item" ><a href="#" class="menu__link" data-sound="forest">Лес</a></li> -->
+               <li class="menu__item" data-sound="drozd"><a href="#" `  class="menu__link" data-sound="drozd">Дрозд</a></li>
+               <li class="menu__item" data-sound="javoronok"><a href="#" class="menu__link" data-sound="javoronok">Жаворонок</a></li>
+               <li class="menu__item" data-sound="slavka"><a href="#" class="menu__link" data-sound="slavka">Славка</a></li>
+               <li class="menu__item" data-sound="solovey"><a href="#" class="menu__link" data-sound="solovey">Соловей</a></li>
+               <li class="menu__item" data-sound="zarynka"><a href="#" class="menu__link" data-sound="zarynka">Зарянка</a></li>
+            </ul>
+         </nav>
+      </div>
+   </header>
+
+   <main class="main">
+      <div class="main__block">
+         <img src="assets/img/forest.jpg" alt="forest" class="main__img">
+         <audio class="player">
+            <source src="assets/audio/forest.mp3" type="audio/mp3" />
+         </audio>
+         <div class="button__block">
+            <button class="block__btn">
+               <svg class="main__icon play visible">
+                  <use xlink:href="./assets/svg/!sprite.svg#play"></use>
+               </svg>
+               <svg class="main__icon pause invisible">
+                  <use xlink:href="./assets/svg/!sprite.svg#pause"></use>
+               </svg>
+            </button>
+         </div>         
+      </div>
+   </main>
+
+   <footer class="footer">
+      <div class="container footer__container">
+         <div class="info">
+            <div class="copyright">
+               ©
+            </div>
+            <div class="year">
+               2022
+            </div>
+            <div class="github">
+               <a href="https://github.com/iamarrow88" class="github__link">github</a>
+            </div>
+         </div>
+   
+         <div class="rss">
+            <a href="https://rs.school/js-stage0/" class="rss__link">
+               <svg class="footer__icon">
+                  <use xlink:href="./assets/svg/!sprite.svg#rss"></use>
+               </svg>
+            </a>
+         </div>
+      </div>
+   </footer>
+
+   <script src="index.js"></script>
+
+</body>
+
+</html>
