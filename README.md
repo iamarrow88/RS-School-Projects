@@ -6,4 +6,4 @@
 
  + Eco-sounds - https://iamarrow88.github.io/RS-School-Projects/eco-sounds/
 
- + Image galery - https://rolling-scopes-school.github.io/iamarrow88-JSFEPRESCHOOL/img-galery
+ + Image galery - https://iamarrow88.github.io/RS-School-Projects/img-gallery/
