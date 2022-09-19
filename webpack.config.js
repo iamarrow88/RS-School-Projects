@@ -9,7 +9,6 @@ const devServer = (isDev) => (!isDev ? {} : {
   devServer: {
     open: true,
     port: 8080,
-    contentBase: path.join(__dirname, 'public'),
   },
 });
 
@@ -28,11 +27,6 @@ module.exports = ({ development }) => ({
   },
   module: {
     rules: [
-      {
-        test: /\.[tj]s$/,
-        use: 'ts-loader',
-        exclude: /node_modules/,
-      },
       {
         test: /\.(?:ico|gif|png|jpg|jpeg|svg)$/i,
         type: 'asset/resource',
@@ -54,7 +48,7 @@ module.exports = ({ development }) => ({
   plugins: [
     ...esLintPlugin(development),
     new MiniCssExtractPlugin({ filename: '[name].[contenthash].css' }),
-    new HtmlWebpackPlugin({ template: './src/index.html' }),
+    new HtmlWebpackPlugin({ template: './src/pages/main/index.html' }),
     /* new CopyPlugin({
       patterns: [{
         from: 'public',
@@ -66,5 +60,11 @@ module.exports = ({ development }) => ({
   resolve: {
     extensions: ['.ts', '.js'],
   },
-  ...devServer(development),
+  devServer: {
+    static: {
+      directory: path.join(__dirname, 'public'),
+    },
+    compress: true,
+    port: 9000,
+  },
 });
